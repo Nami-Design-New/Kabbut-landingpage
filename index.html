@@ -1,0 +1,408 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable= no shrink-to-fit= no">
+    <title>Kabbut</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/imgs/logo.svg">
+    <!-- required css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
+    <link rel="stylesheet" href="assets/css/leaflet.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img src="assets/imgs/logo.svg"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-link">
+                        <a class="home active" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="request_service" href="#request_service">إطلب خدمة</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="how-it-works" href="#how-it-works">كيف يعمل</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="contact-us" href="#contact-us">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns d-flex gap-3">
+                <a class="btn" href="#i">حمله الأن</a>
+                <button class="btn toogler">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- main-wrapper -->
+    <main class="content">
+        <!-- hero section -->
+        <section id="home" class="hero-section sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 ">
+                        <div class="content-wrap">
+                            <h1 data-aos="fade-up">
+                                <span>إنقل أثاثك</span> بامان وسهولة
+                            </h1>
+                            <p data-aos="fade-up">
+                                مرحبًا بك في تطبيقنا الجديد الذي يوفر لك خدمات نقل الأثاث وونش السيارة بكل سهولة وأمان.
+                                نحن هنا لجعل تجربة نقل الأثاث والبضائع الثقيلة سلسة ومريحة.
+                            </p>
+                            <div class="btns">
+                                <a href="#!" data-aos="zoom-in-up">
+                                    <img src="assets/imgs/app-store.svg" alt="app-store">
+                                </a>
+                                <a href="#!" data-aos="zoom-in-up">
+                                    <img src="assets/imgs/google-play.svg" alt="google-play">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="img-wrap">
+                            <img src="assets/imgs/mainImage.png" alt="main">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- request servise -->
+        <section class="requests sec" id="request_service">
+            <div class="container p-0">
+                <form class="request_form row">
+                    <div class="headere">
+                        <h2 class="text-center">اطلب الخدمة اللي تريدها بسهولة وأمان</h2>
+                    </div>
+                    <div class="col-lg-3 .col-12">
+                        <div class="select_service_type p-2">
+                            <label for="furniture-movement">
+                                <div class="service">
+                                    <img src="assets/imgs/radio1.png" alt="service1">
+                                    <span>
+                                        نقـــل اثــــاث
+                                    </span>
+                                    <p>
+                                        خدمتنا تجعل التنقل سهلاً ومريحًا. اترك عبء نقل الأثاث إلينا واستمتع
+                                        بتجربة
+                                        خالية من الإجهاد.
+                                    </p>
+                                </div>
+                                <input checked type="radio" name="servicetype" id="furniture-movement">
+                            </label>
+                            <label for="Carwinch">
+                                <div class="service">
+                                    <img src="assets/imgs/radio2.png" alt="service2">
+                                    <span>ونـش سيــارة</span>
+                                    <p>خدمة سريعة وموثوقة على مدار الساعة. دع فريقنا يعيدك إلى الطريق بسرعة.</p>
+                                </div>
+                                <input type="radio" name="servicetype" id="Carwinch">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12 p-4">
+                        <div class="information">
+                            <!-- name&phone -->
+                            <div class="form-group">
+                                <div class="input_field">
+                                    <label for="name">
+                                        <i class="fa-light fa-user"></i> الاسم
+                                    </label>
+                                    <input type="text" id="name" name="name" placeholder="مثال : محمد احمد">
+                                </div>
+                                <div class="input_field">
+                                    <label for="phone">
+                                        <i class="fa-light fa-mobile"></i> رقم الهاتف
+                                    </label>
+                                    <div class="inputs">
+                                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXXX">
+                                        <input type="text" id="phoneField1" name="countryPicker" class="country-picker">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- locations -->
+                            <div class="form-group">
+                                <div class="input_field">
+                                    <label for="lifting_location">
+                                        <i class="fa-sharp fa-regular fa-location-dot"></i> موقع التحميل
+                                    </label>
+                                    <div class="inputs">
+                                        <input type="text" id="lifting_location" name="lifting_location"
+                                            value="ابوظبي , الطريق الإقليمي" placeholder="حدد الموقع من الخريطة">
+                                        <input type="button" value="تغيير" data-bs-toggle="modal"
+                                            data-bs-target="#liftingLocation">
+                                    </div>
+                                </div>
+                                <div class="input_field">
+                                    <label for="receive_location">
+                                        <i class="fa-sharp fa-regular fa-location-dot"></i> موقع التنزيل
+                                    </label>
+                                    <div class="inputs">
+                                        <input type="text" id="receive_location" name="receive_location"
+                                            placeholder="حدد الموقع من الخريطة">
+                                        <input type="button" value="تغيير" data-bs-toggle="modal"
+                                            data-bs-target="#recieveLocation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input_field">
+                                <label for="price">
+                                    <i class="fa-light fa-tags"></i> السعر
+                                </label>
+                                <input type="text" id="price" name="price" placeholder="اكتب السعر اللي تريده">
+                                <span id="currency">درهم</span>
+                            </div>
+                            <div class="form-check form-switch d-flex justify-content-between align-items-center p-0">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">
+                                    <i class="fa-light fa-calendar-days"></i> تحديد موعد مجدول
+                                </label>
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault">
+                            </div>
+                            <button type="submit">
+                                تأكيد
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--  appImgs -->
+        <section class="appImgs">
+            <div class="sectionTitle">
+                <h2><span>شهادات بصرية:</span> انظر إلى تطبيقنا في العمل</h2>
+            </div>
+            <div class="container">
+                <div class="swiper phoneImgs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/imgs/6.jpg" />
+                        </div>
+                    </div>
+                    <img src="assets/imgs/frame.png" class="frame" alt="">
+                </div>
+            </div>
+
+        </section>
+        <section class="how-it-works sec" id="how-it-works">
+            <div class="container">
+                <h2><span>الخدمة خطوة بخطوة: </span> كيف نعمل</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s1.svg" alt="service">
+                            <h5>طلب الخدمة</h5>
+                            <p>املأ نموذج طلب الخدمة ببياناتك وتحديد نوع الخدمة والتفاصيل.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s2.svg" alt="service">
+                            <h5>مراجعة وتأكيد</h5>
+                            <p>نقوم بمراجعة طلبك والتحدث معك لضمان فهمنا الكامل لاحتياجاتك.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s3.svg" alt="service">
+                            <h5> الجدولة</h5>
+                            <p>نقوم بجدولة الخدمة وتحديد موعد مناسب وفقًا لجدولك.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s4.svg" alt="service">
+                            <h5> يوم الخدمة</h5>
+                            <p>فريقنا المحترف يصل في اليوم المحدد لتنفيذ الخدمة بعناية وفعالية.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s5.svg" alt="service">
+                            <h5>الانتهاء والدفع</h5>
+                            <p>تأكد من رضاك وقم بالدفع بأمان عبر منصتنا.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 p-2">
+                        <div class="howCard">
+                            <img src="assets/imgs/s6.svg" alt="service">
+                            <h5>متابعة والدعم</h5>
+                            <p>نتابع معك لضمان تلبية توقعاتك، ونكون دائمًا هنا لدعمك.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-us section -->
+        <section class="contact-us sec" id="contact-us">
+            <h2 class="text-center title">
+                <span>تواصل معنا:</span> نحن هنا لخدمتك
+            </h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <form action="" data-aos="fade-up">
+                            <input type="text" placeholder="الإسم بالكامل" name="name" id="name">
+                            <input type="email" placeholder="البريد الإلكترونى" name="email" id="email">
+                            <input type="text" placeholder="الموضوع" name="subject" id="subject">
+                            <textarea name="message" id="message" placeholder="رسالتك" rows="4"></textarea>
+                            <button type="submit">إرسال</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-12 " data-aos="zoom-in-up">
+                        <div class="img">
+                            <img src="assets/imgs/contact.svg" alt="contact">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- download -->
+        <section class="download-app">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-12">
+                        <div class="text">
+                            <h3>ابدأ اليوم</h3>
+                            <p>
+                                اكتشف عالم الراحة من خلال تطبيقنا المحمول. قم بتنزيله الآن للوصول إلى مجموعة متنوعة من
+                                الخدمات والمزايا أثناء التنقل. سواء كنت بحاجة إلى حجز خدمة سريعة، أو تحديثات في الوقت
+                                الحقيقي، أو عروض حصرية، فإن تطبيقنا يغطي جميع احتياجاتك.
+                            </p>
+                            <div class="links">
+                                <a href="#"><img src="assets/imgs/app-store2.svg" alt="app-store"></a>
+                                <a href="#"><img src="assets/imgs/google-play2.svg" alt="google-play"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="img">
+                            <img src="assets/imgs/downloadApp.png" alt="download">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 flex-lg-row flex-column  d-flex justify-content-between align-items-center footer">
+                    <a class="logo" href="index.html">
+                        <img src="assets/imgs/logo.svg" alt="logo">
+                    </a>
+                    <div class="copy">
+                        <p>Copyright © 2023 Kabbut All rights reserved</p>
+                    </div>
+                    <ul class="social">
+                        <li>
+                            <a href="#!">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- lifting location modal -->
+    <div class="modal fade" id="liftingLocation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">حدد موقع التحميل</h5>
+                    <button type="button" class="btn-close" style="box-shadow: none !important;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="حدد موقع التحميل">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d867272.0427997325!2d35.55157424627044!3d31.88535968568026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cf2d28866bdd9%3A0xee17a001d166f686!2z2YHZhNiz2LfZitmG!5e0!3m2!1sar!2seg!4v1698064978479!5m2!1sar!2seg"
+                        height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">تاكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- recieve location modal -->
+    <div class="modal fade" id="recieveLocation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">حدد موقع التنزيل</h5>
+                    <button type="button" class="btn-close" style="box-shadow: none !important;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="حدد موقع التحميل">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d867272.0427997325!2d35.55157424627044!3d31.88535968568026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cf2d28866bdd9%3A0xee17a001d166f686!2z2YHZhNiz2LfZitmG!5e0!3m2!1sar!2seg!4v1698064978479!5m2!1sar!2seg"
+                        height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">تاكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/leaflet.js"></script>
+<script src="assets/js/jquery.ccpicker.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+    // country code picker
+    $(document).ready(function () {
+        $("#phoneField1").CcPicker();
+        $("#phoneField1").CcPicker("setCountryByCode", "ae");
+    });
+</script>
+
+</html>
